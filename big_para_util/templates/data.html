@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    {{name}}
+{% endblock %}
+
+{% block body %}
+    <p>Price : {{price}}</p>
+    <hr>
+    <p>Change : {{rateChange}}</p>
+    <hr>
+    <p>Yesterday's price: {{yesterday}}</p>
+    <hr>
+    <p>Lot volume: {{volume_lot}} </p>
+    <hr>
+    <p>TL volume: {{volume_tl}}</p>
+{% endblock %}

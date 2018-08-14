@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    Type the BIST 100 Stock Name
+{% endblock %}
+
+{% block body %}
+    <form action="{{ url_for('data') }}" method="post">
+        <input type="text" name="name" placeholder="Stock Name">
+        <button>Submit</button>
+    </form>
+    <hr>
+    <h6>Avaliable stock names</h6>
+    <hr>
+    <div class="custom-select" style="width:200px;">
+      <select>
+      {% for stock_name in names %}
+        <option value="{{ stock_name }}" >{{ stock_name }}</option>
+      {% endfor %}
+      </select>
+    </div>
+{% endblock %}

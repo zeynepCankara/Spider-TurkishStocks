@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    You typed invalid stock name
+{% endblock %}
+
+{% block body %}
+  Choose a valid stock from main page
+<hr>
+  <a href="{{ url_for('index') }}"> Go to the main Page</a>
+{% endblock %}
